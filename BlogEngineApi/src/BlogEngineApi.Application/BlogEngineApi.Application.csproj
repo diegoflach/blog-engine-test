@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogEngineApi.Common\BlogEngineApi.Common.csproj" />
+    <ProjectReference Include="..\BlogEngineApi.Domain\BlogEngineApi.Domain.csproj" />
+    <ProjectReference Include="..\BlogEngineApi.Infra.Cc.Identity\BlogEngineApi.Infra.Cc.Identity.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PackageId>Blog Engine API</PackageId>
+    <Version>1.0.0.0</Version>
+    <Authors>Diego Flach</Authors>
+    <Product>Blog Engine API</Product>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.21">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlogEngineApi.Application\BlogEngineApi.Application.csproj" />
+    <ProjectReference Include="..\BlogEngineApi.Infra.Cc.AutoMapper\BlogEngineApi.Infra.Cc.AutoMapper.csproj" />
+    <ProjectReference Include="..\BlogEngineApi.Infra.Cc.IoC\BlogEngineApi.Infra.Cc.IoC.csproj" />
+    <ProjectReference Include="..\BlogEngineApi.Infra.Cc.Middlewares\BlogEngineApi.Infra.Cc.Middlewares.csproj" />
+  </ItemGroup>
+
+</Project>
