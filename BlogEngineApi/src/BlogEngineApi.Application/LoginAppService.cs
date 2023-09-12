@@ -3,6 +3,7 @@ using BlogEngineApi.Common.Utilities;
 using BlogEngineApi.Domain.Dtos.Result;
 using BlogEngineApi.Domain.Dtos;
 using BlogEngineApi.Domain.Statics;
+using BlogEngineApi.Infra.Cc.Identity.Managers;
 using BlogEngineApi.Infra.Cc.Identity.Models;
 
 using Microsoft.AspNetCore.Identity;
@@ -17,11 +18,11 @@ namespace BlogEngineApi.Application
 {
     public class LoginAppService : ILoginAppService
     {
-        private readonly UserManager<ApplicationUser> userManager;
+        private readonly ApplicationUserManager userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IConfiguration configuration;
 
-        public LoginAppService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+        public LoginAppService(ApplicationUserManager userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
