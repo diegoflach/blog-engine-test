@@ -11,5 +11,8 @@
         public static string TwoFactorIsRequired = "Two Factor Authorization is required.";
         public static string UnknownError = "Unknown error.";
         public static string UserNotAllowedToSignIn = "Either your email address or your password is incorrect. Please try again.";
+        public static string InvalidPostStatus = "Post status is not valid for this operation.";
+        public static string InvalidPostAuthor = "Post author is not valid for this operation.";
+
     }
 }

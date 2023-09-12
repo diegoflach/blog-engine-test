@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\" />
+    <ProjectReference Include="..\BlogEngineApi.Infra.Cc.Identity\BlogEngineApi.Infra.Cc.Identity.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\Repository\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
