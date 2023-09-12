@@ -1,8 +1,10 @@
 ﻿using BlogEngineApi.Application;
 using BlogEngineApi.Application.Interfaces;
 using BlogEngineApi.Infra.Cc.Identity.Context;
+using BlogEngineApi.Infra.Cc.Identity.Managers;
 using BlogEngineApi.Infra.Cc.Identity.Models;
 using BlogEngineApi.Infra.Data.Repository.Context;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -77,7 +79,7 @@ namespace BlogEngineApi.Infra.Cc.IoC
 
         private static void RegisterIdentityObjects()
         {
-            Services.AddScoped<UserManager<ApplicationUser>>();
+            Services.AddScoped<ApplicationUserManager>();
             Services.AddScoped<SignInManager<ApplicationUser>>();
         }
 
